@@ -1,0 +1,239 @@
+<html>
+ <head>
+  <title>
+   Sub Webpage
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+   .hover-move:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+
+        .water-animation {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .water-animation::before, .water-animation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: rgba(0, 150, 255, 0.2);
+            animation: wave 5s infinite linear;
+        }
+
+        .water-animation::after {
+            background: rgba(0, 150, 255, 0.3);
+            animation-duration: 7s;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translate(-50%, -75%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -75%) rotate(360deg);
+            }
+        }
+
+        .pulse-animation {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pulse-animation::before, .pulse-animation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 0, 0, 0.2);
+            animation: pulse 5s infinite linear;
+        }
+
+        .pulse-animation::after {
+            background: rgba(255, 0, 0, 0.3);
+            animation-duration: 7s;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .sparkle-animation {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sparkle-animation::before, .sparkle-animation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 0, 0.2);
+            animation: sparkle 5s infinite linear;
+        }
+
+        .sparkle-animation::after {
+            background: rgba(255, 255, 0, 0.3);
+            animation-duration: 7s;
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: translate(-50%, -75%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -75%) rotate(360deg);
+            }
+        }
+
+        .analytics-animation {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .analytics-animation::before, .analytics-animation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: rgba(0, 255, 0, 0.2);
+            animation: analytics-wave 5s infinite linear;
+        }
+
+        .analytics-animation::after {
+            background: rgba(0, 255, 0, 0.3);
+            animation-duration: 7s;
+        }
+
+        @keyframes analytics-wave {
+            0% {
+                transform: translate(-50%, -75%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -75%) rotate(360deg);
+            }
+        }
+  </style>
+ </head>
+ <body class="bg-gradient-to-r from-black to-blue-600 font-poppins min-h-screen flex flex-col">
+  <div class="container mx-auto p-4 flex-grow">
+   <header class="mb-8 flex items-center justify-between">
+    <div class="flex items-center">
+     <h1 class="text-4xl font-bold text-white mr-8">
+      Inlog
+     </h1>
+     <nav>
+      <ul class="flex space-x-4">
+       <li>
+        <a class="text-white hover:text-gray-300" href="#">
+         Home
+        </a>
+       </li>
+       <li>
+        <a class="text-white hover:text-gray-300" href="#">
+         About
+        </a>
+       </li>
+       <li>
+        <a class="text-white hover:text-gray-300" href="#">
+         Services
+        </a>
+       </li>
+       <li>
+        <a class="text-white hover:text-gray-300" href="#">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </div>
+    <div>
+     <a class="text-white hover:text-gray-300" href="#">
+      <i class="fas fa-user-circle text-4xl">
+      </i>
+     </a>
+    </div>
+   </header>
+   <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- Employee Profile -->
+    <a class="bg-white p-6 rounded-lg shadow-md hover-move water-animation block" >
+     <h2 class="text-2xl font-bold mb-4 relative z-10">
+      Employee Profile
+     </h2>
+     <div class="relative z-10">
+      <p class="text-4xl font-bold">
+       Name
+      </p>
+      <p class="text-gray-600">
+       Software Engineer
+      </p>
+      <p class="text-gray-600 mt-2">
+       "Name" is a highly skilled software engineer with over 10 years of experience in the tech industry. He specializes in full-stack development and has a passion for creating innovative solutions.
+      </p>
+     </div>
+    </a>
+    <!-- Analytics Dashboard -->
+    <a class="bg-white p-6 rounded-lg shadow-md hover-move analytics-animation block" href="graph2.html">
+     <h2 class="text-2xl font-bold mb-4 relative z-10">
+      Analytics Dashboard
+     </h2>
+     <div class="flex items-center relative z-10">
+      <img alt="Icon representing analytics dashboard" class="w-16 h-16 mr-4" height="100" src="https://storage.googleapis.com/a1aa/image/PpQknMnwTcLSJtVLPHkyJCaSmK6sGVlQqLmQGxOWvan4vReJA.jpg" width="100"/>
+      <div>
+       <p class="text-4xl font-bold">
+        75%
+       </p>
+       <p class="text-gray-600">
+        Performance Rate
+       </p>
+      </div>
+     </div>
+    </a>
+    <!-- Review -->
+    <a class="bg-white p-6 rounded-lg shadow-md hover-move sparkle-animation block" href="review.html">
+     <h2 class="text-2xl font-bold mb-4 relative z-10">
+      Review
+     </h2>
+     <div class="flex items-center relative z-10">
+      <img alt="Icon representing reviews" class="w-16 h-16 mr-4" height="100" src="https://storage.googleapis.com/a1aa/image/jat1AAlBQubVOBuQBBTSAKnp4JDCJuEkDb4Hb9BHxJy4vReJA.jpg" width="100"/>
+      <div>
+       <p class="text-4xl font-bold">
+        4.5
+       </p>
+       <p class="text-gray-600">
+        Average Rating
+       </p>
+      </div>
+     </div>
+    </a>
+   </div>
+  </div>
+  <footer class="mt-8 text-center text-white p-4">
+   <p>
+    &copy; 2024 FA. All rights reserved.
+   </p>
+  </footer>
+ </body>
+</html>
